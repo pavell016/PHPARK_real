@@ -9,26 +9,26 @@ $user_id_fijo = 1;
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Inicio de Sesión</title>
+    <title>Login</title>
 </head>
 <body>
-<h2>Inicio de Sesión</h2>
+<h2>Login</h2>
 
 <form method="post" action="">
-    Usuario: <input type="text" name="usuario"><br><br>
-    Contraseña: <input type="password" name="clave"><br><br>
+    User: <input type="text" name="usuario"><br><br>
+    Passwd: <input type="password" name="passwd"><br><br>
     <input type="submit" name="login" value="Entrar">
 </form>
 
 <?php
 if (isset($_POST['login'])) {
     $usuario = $_POST['usuario'];
-    $clave = $_POST['clave'];
+    $clave = $_POST['passwd'];
 
     if ($usuario === $usuario_valido && $clave === $clave_valida) {
         $_SESSION['user_id'] = $user_id_fijo;
         echo "<p style='color:green'>Bienvenido, $usuario!</p>";
-        echo "<a href='logout.php'>Cerrar sesión</a>";
+        echo "<a href=''>Cerrar sesión</a>";
     } else {
         echo "<p style='color:red'>Usuario o contraseña incorrectos.</p>";
     }

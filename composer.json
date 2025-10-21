@@ -12,8 +12,7 @@
             "name": "Oriol Cortes"
         }
     ],
-    "require": {},
     "require-dev": {
-        "squizlabs/php_codesniffer": "*"
+        "squizlabs/php_codesniffer": "^4.0"
     }
 }
